@@ -501,7 +501,7 @@ impl std::fmt::Display for ParseError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> Result<(), std::fmt::Error> {
         match *self {
             ParseError::Error => write!(f, "Parse Error"),
-            ParseError::Incomplete(needed) => write!(f, "Incomplete message: {:?}", needed),
+            ParseError::Incomplete(needed) => write!(f, "Incomplete message: {needed:?}"),
         }
     }
 }
